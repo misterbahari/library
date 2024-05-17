@@ -22,3 +22,10 @@ def details(request, id):
 def main(request):
     template = loader.get_template('MAIN.html')
     return HttpResponse(template.render())
+
+def testing(request):
+    template =loader.get_template('template.html')
+    context = {
+        'fruits': ['apple', 'orange', 'banana', 'grapes', 'coconut']
+    }
+    return HttpResponse(template.render(context, request))
