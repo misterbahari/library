@@ -1,9 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-{% for x in fruits %}
-    <h1>{{ x }}</h1>
-{% endfor %}
+
+<h1> Hello {{ firstname }}</h1>
+
+{% comment %}
+        {% for x in fruits %}
+        <h1>{{ x }}</h1>
+        {% endfor %}
+
+        {% with lastname='rahmani' %}
+        <h2> BYE BYE {{ lastname }}</h2>
+        {% endwith %}
+
+        {% if hamster == 1 or day == "sunday" and firstname == "AKBAR" %}
+            <h3>are dada</h3>
+        {% endif %}
+
+        {% if firstname %}
+            <h5> yaaaaaaaaa ali </h5>
+        {% endif %}
+
+        {% if 'banana' not in fruits %}
+            <h1>hahahahah</h1>
+        {% endif %}
+
+        {% if day is rooz %}
+            <h2>jijijijiji</h2>
+        {% endif %}
+{% endcomment %}
+{% comment "this is orm" %}
+    {% for x in aaza %}
+        <h1>{{ x.id }}</h1>
+        <p>
+            {{ x.phone }}
+            {{ x.lastname }}
+        </p>
+    {% endfor %}
+{% endcomment %}
+
+<h6>welcome{# Everyone#}</h6>
+
+<ul>
+    {% for x in fruits %}
+        <li>{{ forloop.revcounter }}</li>
+    {% endfor %}
+</ul>
 
 <p>THESE ARE FRUITS THAT MENTIONED IN VIEWS.PY</p>
 </body>
