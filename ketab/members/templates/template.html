@@ -29,15 +29,13 @@
             <h2>jijijijiji</h2>
         {% endif %}
 {% endcomment %}
-{% comment "this is orm" %}
-    {% for x in aaza %}
-        <h1>{{ x.id }}</h1>
-        <p>
-            {{ x.phone }}
-            {{ x.lastname }}
-        </p>
-    {% endfor %}
-{% endcomment %}
+
+{% for x in aaza %}
+    <h1>{{ x.id }}</h1>
+    <p>{{ x.lastname }}</p>
+    <p>{{ x.firstname }}</p>
+    <p>{{ x.phone }}</p>
+{% endfor %}
 
 <h6>welcome{# Everyone#}</h6>
 

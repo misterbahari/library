@@ -25,6 +25,18 @@ def main(request):
 
 def testing(request):
     mymembers = Member.objects.all().values()
+    context = {
+        'fruits': ['apple', 'orange', 'banana', 'grapes', 'coconut'],
+        'firstname': 'AKBAR',
+        'hamster': 1,
+        'day': 'sunday',
+        'rooz': 'sunday',
+        'aaza': mymembers,
+    }
+    #return HttpResponse(template.render(context, request))
+
+def bottle(request):
+    mymembers = Member.objects.all().order_by('-lastname', '-id').values()
     template =loader.get_template('template.html')
     context = {
         'fruits': ['apple', 'orange', 'banana', 'grapes', 'coconut'],
