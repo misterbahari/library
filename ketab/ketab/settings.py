@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'members',
     'kotob',
     'rest_framework',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
