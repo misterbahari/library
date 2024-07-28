@@ -6,5 +6,5 @@ urlpatterns = [
     # path('', include('members.urls')),
     path('accounts/', include('accounts.urls', namespace='accounts')),
     # path('', include('kotob.urls')),
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
 ]
